@@ -12,6 +12,8 @@ power x y
 primeFactors :: Int -> [Int]
 primeFactors x = filter (isFactor x) (filter(isPrime) [2..x])
 
-main :: IO()
-main = do
-    print $ primeFactors 15
+intToString :: [Int] -> String
+intToString n = show n
+
+
+    
