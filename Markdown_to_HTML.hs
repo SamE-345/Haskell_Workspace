@@ -22,7 +22,12 @@ check_Para x y
     | x == new_Para(get_File_Line x) && y = "<p>"
     | x == new_Para(get_File_Line x) && y = "<\p>"
 
-read_File :: IO()
+readFileLineByLine :: FilePath -> IO ()
+readFileLineByLine filePath = do
+    content <- readFile filePath           
+    let linesOfFile = lines content        
+             
+
 
 get_File_Line :: Int -> String
 get_File_Line x = "Contents"
